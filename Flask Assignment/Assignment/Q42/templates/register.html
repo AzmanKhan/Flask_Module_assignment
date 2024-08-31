@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Register</title>
+  </head>
+  <body>
+    <h1>Register</h1>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      {{ form.username.label }} {{ form.username }}
+      {{ form.password.label }} {{ form.password }}
+      {{ form.confirm_password.label }} {{ form.confirm_password }}
+      {{ form.submit }}
+    </form>
+    <a href="{{ url_for('login') }}">Login</a>
+  </body>
+</html>
